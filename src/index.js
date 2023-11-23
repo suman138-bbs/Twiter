@@ -43,10 +43,12 @@ app.listen(8080, async () => {
   // const findTweet = await Tweet.find({ userEmail: "bhandari986051@gamil.com" });
   // const tweetId = findTweet[0].id;
 
-  // const tweet = await tweetRepo.create({
-  //   content:
-  //     "Developer lets have a fun with mongoose and Databases using Cloud and leave a comment",
-  // });
+  const tweet = await tweetRepo.create({
+    content:
+      "Developer lets have a fun with mongoose and Databases using Cloud and leave a comment",
+  });
+
+  console.log(tweet);
 
   // const comment = await Comment.create({ comment: "This is Good Content" });
 
@@ -56,6 +58,6 @@ app.listen(8080, async () => {
   // await tweet.save();
   // console.log(tweet);
 
-  const tweet = await tweetRepo.getAll(4, 1);
-  console.log(tweet[0].getContentAndEmail);
+  const tweets = await tweetRepo.getAll(4, 1);
+  console.log(tweets[0].getContentAndEmail);
 });
