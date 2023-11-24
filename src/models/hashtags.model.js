@@ -21,3 +21,5 @@ const hashTagSchema = new mongoose.Schema(
 const Hashtag = mongoose.model("Hashtag", hashTagSchema);
 
 export default Hashtag;
+
+//1 h 8 min
